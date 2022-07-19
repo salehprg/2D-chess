@@ -17,6 +17,12 @@ public class Piece_Soldier : Piece
         base._Update();
     }
 
+    public override void move(int row, int col)
+    {
+        base.move(row, col);
+        firstmove = false;
+    }
+
     public override List<(int, int)> show_available_move(List<List<Piece>> board)
     {
         var index = get_index(board);
@@ -25,14 +31,51 @@ public class Piece_Soldier : Piece
 
         List<(int, int)> result = new List<(int, int)>();
 
-        checkMove(row + 1, col, result);
-        checkMove(row + 1, col + 1, result);
-        checkMove(row + 1, col - 1, result);
-
-        if (firstmove)
+        if (gamecore.playerWhite == white)
         {
-            checkMove(row + 2 , col , result);
+            checkMove(row + 1, col, result , false);
+
+            Piece temp = gamecore.GetPiece(row + 1, col + 1).Item1;
+            if (temp.piece_Type != Piece_types.None && temp.white != white)
+            {
+                checkMove(row + 1, col + 1, result);
+            }
+
+            temp = gamecore.GetPiece(row + 1, col - 1).Item1;
+            if (temp.piece_Type != Piece_types.None && temp.white != white)
+            {
+                checkMove(row + 1, col - 1, result);
+            }
+
+            if (firstmove)
+            {
+                checkMove(row + 2, col, result , false);
+            }
+
         }
+        else
+        {
+            checkMove(row - 1, col, result , false);
+
+            Piece temp = gamecore.GetPiece(row - 1, col + 1).Item1;
+            if (temp.piece_Type != Piece_types.None && temp.white != white)
+            {
+                checkMove(row - 1, col + 1, result);
+            }
+            
+            temp = gamecore.GetPiece(row - 1, col - 1).Item1;
+            if (temp.piece_Type != Piece_types.None && temp.white != white)
+            {
+                checkMove(row - 1, col - 1, result);
+            }
+
+            if (firstmove)
+            {
+                checkMove(row - 2, col, result , false);
+            }
+        }
+
+
 
         return result;
 

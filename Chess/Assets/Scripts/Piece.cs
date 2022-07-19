@@ -6,7 +6,7 @@ public class Piece : MonoBehaviour
 {
     public Piece_types piece_Type;
     public bool white;
-    
+    public bool locked;
     public Gamecore gamecore;
 
     public Piece()
@@ -36,7 +36,7 @@ public class Piece : MonoBehaviour
         gamecore.UpdateBoard(this , row , col);
     }
 
-    public int checkMove(int row , int col , List<(int,int)> result)
+    public int checkMove(int row , int col , List<(int,int)> result , bool attack = true)
     {
         Piece temp = gamecore.GetPiece(row , col ).Item1;
         int condition = gamecore.GetPiece(row , col ).Item2;
@@ -46,7 +46,7 @@ public class Piece : MonoBehaviour
             result.Add((row,col));
             return 1;
         }
-        else if(temp?.gamecore != null && temp.white != this.white)
+        else if(attack && temp?.gamecore != null && temp.white != this.white)
         {
             result.Add((row,col));
             return -1;

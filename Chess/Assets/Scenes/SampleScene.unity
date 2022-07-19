@@ -254,12 +254,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1269fac83fe1aa45959987030870eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldier_black: {fileID: 0}
-  elephent_black: {fileID: 0}
-  horse_black: {fileID: 0}
-  tower_black: {fileID: 0}
-  king_black: {fileID: 0}
-  minister_black: {fileID: 0}
+  soldier_black: {fileID: 4146756978943734562, guid: d454da01afba74544b329a085990f6dc, type: 3}
+  elephent_black: {fileID: 9045800065076848471, guid: 11d038ebf31b2ac42aa62f7dcfa0b928, type: 3}
+  horse_black: {fileID: -4850759387417062182, guid: c78927705d858c14ab16066c6a49cdb9, type: 3}
+  tower_black: {fileID: 2964540619756637990, guid: 4747cb0d03afd794db95c1c64f5d6889, type: 3}
+  king_black: {fileID: 7738017449517812232, guid: 72f3ab00a07332d4ba844cf58cdf73a1, type: 3}
+  minister_black: {fileID: -2657867955695678513, guid: 20d986c91172d764cad35c4769e6672c, type: 3}
   soldier_white: {fileID: 6310617763907905844, guid: 708dbf3d1e005bf47b65ab4fd56fa690, type: 3}
   elephent_white: {fileID: -8206489900427624554, guid: 181534f99be15854fbb889da43cdf920, type: 3}
   horse_white: {fileID: -5515344503744033514, guid: 71081c2eec3b9234ca806cf148726e26, type: 3}
@@ -268,10 +268,10 @@ MonoBehaviour:
   minister_white: {fileID: 890868178821741540, guid: b2eb000862649524cbae76c1ee8a5ff0, type: 3}
   highlight: {fileID: 6818162786997219768, guid: c5e9f1b413f44de44a811bb765e31086, type: 3}
   offset_x: 1
-  offset_y: 0.8
+  offset_y: 1.05
   highlights: []
   playerWhite: 1
-  basePos: {x: -3.5, y: -2.8}
+  basePos: {x: -3.5, y: -3.4}
 --- !u!1 &1186122602
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186122602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -2.8, z: 0}
+  m_LocalPosition: {x: -3.5, y: -3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -361,7 +361,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1334619534, guid: 9f56439b83ec56c4f9ad14e905c52cf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5d67f48c1cffc5438a95a9cfe88194b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -411,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868122159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.57, y: -3.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
