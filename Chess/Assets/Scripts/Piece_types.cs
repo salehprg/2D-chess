@@ -5,5 +5,6 @@ public enum Piece_types
     Elephnet,
     King,
     Minister,
-    Soldier
+    Soldier,
+    None
 }
